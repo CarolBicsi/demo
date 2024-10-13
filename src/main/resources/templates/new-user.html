@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <title>Create New User</title>
+</head>
+<body>
+<h1>Create New User</h1>
+<form action="/users" method="post">
+  <label for="name">姓名:</label>
+  <input type="text" id="name" name="name" required />
+
+  <label for="age">年龄:</label>
+  <input type="number" id="age" name="age" required />
+
+  <button type="submit">创建</button>
+</form>
+
+</body>
+</html>
