@@ -1,0 +1,32 @@
+spring:
+    application:
+        name: demo
+    datasource:
+      url: jdbc:mysql://localhost:3306/demo?useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    jpa:
+      show-sql: true
+      hibernate:
+        ddl-auto: update
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQL8Dialect
+    thymeleaf:
+      cache: false
+server:
+    port: 8080
+mybatis:
+  mapper-locations: classpath:com/example/demo/mapper/*.xml
+  type-aliases-package: com.example.demo.model
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+logging:
+  level:
+    org.mybatis: DEBUG
+    com.example.demo.mapper: DEBUG
+    org.springframework.aop: DEBUG
+
+
